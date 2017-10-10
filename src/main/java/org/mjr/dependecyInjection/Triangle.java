@@ -1,45 +1,24 @@
 package org.mjr.dependecyInjection;
 
+import java.util.List;
+
 public class Triangle {
 
-	public Point getPointA() {
-		return pointA;
+	List<Point> points;
+
+	public List<Point> getPoints() {
+		return points;
 	}
 
-
-	public void setPointA(Point pointA) {
-		this.pointA = pointA;
+	public void setPoints(List<Point> points) {
+		this.points = points;
 	}
-
-
-	public Point getPointB() {
-		return pointB;
-	}
-
-
-	public void setPointB(Point pointB) {
-		this.pointB = pointB;
-	}
-
-
-	public Point getPointC() {
-		return pointC;
-	}
-
-
-	public void setPointC(Point pointC) {
-		this.pointC = pointC;
-	}
-
-
-	protected Point pointA;
-	protected Point pointB;
-	protected Point pointC;
-	
 	
 	public void draw(){
 		
-		System.out.println(" "  + pointA +  "  " +   pointB +  "  "  + pointC );
-		
+		for (Point p:points){
+			System.out.println(p);
+		}
 	}
+	
 }

@@ -4,9 +4,13 @@
 
 <beans>
 	<bean id="triangle" class="org.mjr.dependecyInjection.Triangle">
-		<property name="pointA" ref="pa"></property>
-		<property name="pointB" ref="pb"></property>		
-		<property name="pointC" ref="pc"></property>
+		<property name="points">
+			<list>
+				<ref bean="pa"></ref>
+				<ref bean="pb"></ref>
+				<ref bean="pc"></ref>
+			</list>
+		</property>
 	</bean>
 
 	
