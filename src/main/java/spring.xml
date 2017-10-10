@@ -4,8 +4,28 @@
 
 <beans>
 	<bean id="triangle" class="org.mjr.dependecyInjection.Triangle">
-		<constructor-arg type="java.lang.String" value="Equilatero "></constructor-arg>
-		<constructor-arg  type="int" value="20"></constructor-arg>
+		<property name="pointA" ref="pa"></property>
+		<property name="pointB" ref="pb"></property>		
+		<property name="pointC" ref="pc"></property>
 	</bean>
+
+	
+	
+	<bean id="pa" class="org.mjr.dependecyInjection.Point">
+		<property name="x"    value="1"></property>
+		<property name="y"    value="2"></property>
+	</bean>	
+	
+	<bean id="pb" class="org.mjr.dependecyInjection.Point">
+		<property name="x"   value="3"></property>
+		<property name="y"   value="4"></property>
+	</bean>	
+	
+	<bean id="pc" class="org.mjr.dependecyInjection.Point">
+		<property name="x"   value="5"></property>
+		<property name="y"   value="6"></property>
+	</bean>	
+	
+
 	
 </beans>

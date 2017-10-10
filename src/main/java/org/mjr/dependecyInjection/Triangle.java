@@ -2,45 +2,44 @@ package org.mjr.dependecyInjection;
 
 public class Triangle {
 
-	protected String type;
-	protected int height;
+	public Point getPointA() {
+		return pointA;
+	}
+
+
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
+	}
+
+
+	public Point getPointB() {
+		return pointB;
+	}
+
+
+	public void setPointB(Point pointB) {
+		this.pointB = pointB;
+	}
+
+
+	public Point getPointC() {
+		return pointC;
+	}
+
+
+	public void setPointC(Point pointC) {
+		this.pointC = pointC;
+	}
+
+
+	protected Point pointA;
+	protected Point pointB;
+	protected Point pointC;
 	
 	
-	public Triangle(String type, int height) {
-		super();
-		this.type = type;
-		this.height = height;
-	}
-
-
-
-	public int getHeight() {
-		return height;
-	}
-
-
-
-	public String getType() {
-		return type;
-	}
-
-	
-
-	public Triangle(String type) {
-		super();
-		this.type = type;
-	}
-
-
-
-	/*public void setType(String type) {
-		this.type = type;
-	}
-*/
-
 	public void draw(){
 		
-		System.out.println(" Triangle type : "  + getType() + "  " +  getHeight());
+		System.out.println(" "  + pointA +  "  " +   pointB +  "  "  + pointC );
 		
 	}
 }
