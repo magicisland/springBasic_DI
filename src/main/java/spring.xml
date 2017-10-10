@@ -4,7 +4,8 @@
 
 <beans>
 	<bean id="triangle" class="org.mjr.dependecyInjection.Triangle">
-		<property name="type" value="escaleno"></property>
+		<constructor-arg type="java.lang.String" value="Equilatero "></constructor-arg>
+		<constructor-arg  type="int" value="20"></constructor-arg>
 	</bean>
 	
 </beans>
