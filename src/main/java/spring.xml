@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
-"http://www.springframework.org/dtd/spring-beans-3.0.dtd">
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="triangle" class="org.mjr.dependecyInjection.Triangle">
-		<property name="points">
-			<list>
-				<ref bean="pa"></ref>
-				<ref bean="pb"></ref>
-				<ref bean="pc"></ref>
-			</list>
-		</property>
+	<bean id="triangle" class="org.mjr.dependecyInjection.Triangle" autowire="byName">
+		
 	</bean>
 
 	
 	
-	<bean id="pa" class="org.mjr.dependecyInjection.Point">
+	<bean id="pointA" class="org.mjr.dependecyInjection.Point">
 		<property name="x"    value="1"></property>
 		<property name="y"    value="2"></property>
 	</bean>	
 	
-	<bean id="pb" class="org.mjr.dependecyInjection.Point">
+	<bean id="pointB" class="org.mjr.dependecyInjection.Point">
 		<property name="x"   value="3"></property>
 		<property name="y"   value="4"></property>
 	</bean>	
 	
-	<bean id="pc" class="org.mjr.dependecyInjection.Point">
+	<bean id="pointC" class="org.mjr.dependecyInjection.Point">
 		<property name="x"   value="5"></property>
 		<property name="y"   value="6"></property>
 	</bean>	
